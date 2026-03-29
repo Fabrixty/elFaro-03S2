@@ -1,2 +1,2 @@
-This file contains the main files of a small website project
-Sorry!!
+This is a small lil' test!!
+Nothing important here!!
