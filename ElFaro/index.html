@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<head>
+    <title>El Faro - Periódico Local</title>
+   
+   <style>
+
+        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.5; margin: 0; padding: 0; color: #333; }
+        header { background-color: #3d5369; color: white; padding: 30px; text-align: center; }
+        header img { width: 100px; height: auto; margin-bottom: 10px; }
+        nav { background-color: #34495e; padding: 15px; text-align: center; position: sticky; top: 0; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+        
+        main { padding: 20px; max-width: 800px; margin: auto; }
+        section { margin-bottom: 50px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+        h2 { color: #2c3e50; border-left: 5px solid #cc0000; padding-left: 10px; }
+
+        /* estilo de tabla */
+        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        td { padding: 20px; border: 1px solid #ddd; }
+        
+  
+        .noticia-titulo { font-size: 1.4em; font-weight: bold; display: block; color: #2c3e50; }
+        .noticia-categoria { font-size: 0.9em; font-weight: bold; color: #cc0000; display: block; margin: 5px 0 10px 0; text-transform: uppercase; }
+        .noticia-texto { display: block; text-align: justify; }
+
+        .multimedia { text-align: center; margin: 30px 0; background: #f4f4f4; padding: 20px; border-radius: 8px; }
+    
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="logo.png" alt="Logotipo El Faro"> <h1>El Faro</h1>
+    </header>
+    
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#deporte">Deporte</a>
+        <a href="#negocios">Negocios</a>
+    </nav>
+
+    <main>
+        <section id="inicio">
+
+
+            <h2>Noticias Generales</h2>
+
+            <table>
+                <tr>
+                    <td>
+                        <span class="noticia-titulo">Alcalde anuncia nuevo parque central</span>
+                        <span class="noticia-categoria">Categoría: Local</span>
+                        <span class="noticia-texto">El alcalde de la ciudad cortó la cinta del nuevo parque central, el cual cuenta con áreas verdes y zonas de juego para niños.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="noticia-titulo">Clima extremo para el fin de semana</span>
+                        <span class="noticia-categoria">Categoría: Clima</span>
+                        <span class="noticia-texto">Se esperan fuertes lluvias y vientos a partir del viernes por la noche. Se recomienda a la población tomar precauciones.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="noticia-titulo">Festival cultural rompe récord de asistencia</span>
+                        <span class="noticia-categoria">Categoría: Cultura</span>
+                        <span class="noticia-texto">Más de 10,000 personas asistieron al festival de música y arte local, superando las expectativas de los organizadores.</span>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="multimedia">
+                <h3>Noticia destacada: Sismo de magnitud 6.1 (Video)</h3>
+                <video width="100%" height="300" max-width="100" controls>
+                    <source src="video.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="multimedia">
+            <h3>Demo de audio  (Audio)</h3>
+            <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+            </audio>
+            </div>
+        </section>
+
+
+        <section id="deporte">
+            <h2>Deporte</h2>
+            <table>
+                <tr>
+                    <td>
+                    <span class="noticia-titulo">El equipo local gana el campeonato regional</span>
+                    <span class="noticia-categoria">Categoría: Deporte</span>
+                    <span class="noticia-texto">Con un gol en el último minuto, el equipo de la ciudad se coronó campeón tras una temporada invicta.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    <span class="noticia-titulo">Nueva pista atlética de nivel olímpico</span>
+                    <span class="noticia-categoria">Categoría: Deporte</span>
+                    <span class="noticia-texto">Los atletas de la región ahora cuentan con instalaciones de primer nivel para sus entrenamientos diarios.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    <span class="noticia-titulo">Torneo escolar de básquetbol inicia este sábado</span>
+                    <span class="noticia-categoria">Categoría: Deporte</span>
+                    <span class="noticia-texto">Las escuelas secundarias se preparan para el inicio de la temporada de básquetbol juvenil en el gimnasio municipal.</span>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="negocios">
+            <h2>Negocios y Emprendimientos</h2>
+            <table>
+                <tr>
+                    <td>
+                    <span class="noticia-titulo">Startup tecnológica local abre nuevas oficinas</span>
+                    <span class="noticia-categoria">Categoría: Emprendimiento</span>
+                    <span class="noticia-texto">Jóvenes ingenieros han lanzado una aplicación que promete revolucionar el transporte compartido en la ciudad.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    <span class="noticia-titulo">Informe: Sube el precio de la vivienda en el centro</span>
+                    <span class="noticia-categoria">Categoría: Negocios</span>
+                    <span class="noticia-texto">El sector inmobiliario reporta un incremento del 5% en los arriendos durante este último trimestre.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="noticia-titulo">Feria de emprendedores locales este domingo</span>
+                        <span class="noticia-categoria">Categoría: Emprendimiento</span>
+                        <span class="noticia-texto">Más de 50 pequeños empresarios mostrarán sus productos en la plaza de armas para incentivar la economía.</span>
+                    </td>
+                </tr>
+
+            </table>
+       
+        </section>
+    
+    </main>
+
+</body>
+</html>
