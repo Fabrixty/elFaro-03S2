@@ -1,124 +1,164 @@
 <!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Faro - Periódico Local</title>
-
+    <link rel="stylesheet" href="style.css">
 </head>
-<body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.5; margin: 0; padding: 0; color: #333;">
+<body>
 
-    <header style="background-color: #3d5369; color: white; padding: 30px; text-align: center;">
-        <img src="logo.png" alt="Logotipo El Faro" style="width: 100px; height: auto; margin-bottom: 10px;">
-        <h1 style="margin: 0;">El Faro</h1>
+    <header>
+        <img src="logo.png" alt="Logotipo El Faro" class="logo-header">
+        <h1>El Faro</h1>
+        <div id="reloj-en-vivo">Cargando hora...</div>
     </header>
     
-    <nav style="background-color: #34495e; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000;">
-        <a href="#inicio" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold;">Inicio</a>
-        <a href="#deporte" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold;">Deporte</a>
-        <a href="#negocios" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold;">Negocios</a>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#deporte">Deporte</a>
+        <a href="#negocios">Negocios</a>
+        <a href="#publicar">Publicar</a>
+        <a href="#contacto">Contacto</a>
     </nav>
 
-    <main style="padding: 20px; max-width: 800px; margin: auto;">
+    <main>
         
-        <section id="inicio" style="margin-bottom: 50px; border-bottom: 1px solid #eee; padding-bottom: 20px;">
-            <h2 style="color: #2c3e50; border-left: 5px solid #cc0000; padding-left: 10px;">Noticias Generales</h2>
-
-            <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
-                <tr>
-                    <td style="padding: 20px; border: 1px solid #ddd;">
-                        <span style="font-size: 1.4em; font-weight: bold; display: block; color: #2c3e50;">Alcalde anuncia nuevo parque central</span>
-                        <span style="font-size: 0.9em; font-weight: bold; color: #cc0000; display: block; margin: 5px 0 10px 0; text-transform: uppercase;">Categoría: Local</span>
-                        <span style="display: block; text-align: justify;">El alcalde de la ciudad cortó la cinta del nuevo parque central, el cual cuenta con áreas verdes y zonas de juego para niños.</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="padding: 20px; border: 1px solid #ddd;">
-                        <span style="font-size: 1.4em; font-weight: bold; display: block; color: #2c3e50;">Clima extremo para el fin de semana</span>
-                        <span style="font-size: 0.9em; font-weight: bold; color: #cc0000; display: block; margin: 5px 0 10px 0; text-transform: uppercase;">Categoría: Clima</span>
-                        <span style="display: block; text-align: justify;">Se esperan fuertes lluvias y vientos a partir del viernes por la noche. Se recomienda a la población tomar precauciones.</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="padding: 20px; border: 1px solid #ddd;">
-                        <span style="font-size: 1.4em; font-weight: bold; display: block; color: #2c3e50;">Festival cultural rompe récord de asistencia</span>
-                        <span style="font-size: 0.9em; font-weight: bold; color: #cc0000; display: block; margin: 5px 0 10px 0; text-transform: uppercase;">Categoría: Cultura</span>
-                        <span style="display: block; text-align: justify;">Más de 10,000 personas asistieron al festival de música y arte local, superando las expectativas de los organizadores.</span>
-                    </td>
-                </tr>
+        <section id="inicio">
+            <h2>Noticias Generales <span class="badge-contador">Artículos: <span id="contador-inicio">0</span></span></h2>
+            <table id="tabla-inicio">
+                <tbody>
+                    <tr class="articulo-item">
+                        <td>
+                            <span class="noticia-titulo">Alcalde anuncia nuevo parque central</span>
+                            <span class="noticia-categoria">Categoría: Local</span>
+                            <span class="noticia-texto">El alcalde de la ciudad cortó la cinta del nuevo parque central, el cual cuenta con áreas verdes y zonas de juego para niños.</span>
+                        </td>
+                    </tr>
+                    <tr class="articulo-item">
+                        <td>
+                            <span class="noticia-titulo">Clima extremo para el fin de semana</span>
+                            <span class="noticia-categoria">Categoría: Clima</span>
+                            <span class="noticia-texto">Se esperan fuertes lluvias y vientos a partir del viernes por la noche. Se recomienda a la población tomar precauciones.</span>
+                        </td>
+                    </tr>
+                    <tr class="articulo-item">
+                        <td>
+                            <span class="noticia-titulo">Festival cultural rompe récord de asistencia</span>
+                            <span class="noticia-categoria">Categoría: Cultura</span>
+                            <span class="noticia-texto">Más de 10,000 personas asistieron al festival de música y arte local, superando las expectativas de los organizadores.</span>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
 
-            <div style="text-align: center; margin: 30px 0; background: #f4f4f4; padding: 20px; border-radius: 8px;">
-                <h3 style="color: #2c3e50;">Noticia destacada: Pinguinos vuelven a la costa (Demo Video)</h3>
-                <video width="100%" height="300" controls style="display: block; margin: 0 auto;">
+            <div class="multimedia-caja">
+                <h3>Noticia destacada: Pingüinos vuelven a la costa</h3>
+                <video width="100%" height="auto" controls class="video-player">
                     <source src="video.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
                 </video>
             </div>
         </section>
 
-        <section id="deporte" style="margin-bottom: 50px; border-bottom: 1px solid #eee; padding-bottom: 20px;">
-            <h2 style="color: #2c3e50; border-left: 5px solid #cc0000; padding-left: 10px;">Deporte</h2>
-            <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
-                <tr>
-                    <td style="padding: 20px; border: 1px solid #ddd;">
-                        <span style="font-size: 1.4em; font-weight: bold; display: block; color: #2c3e50;">El equipo local gana el campeonato regional</span>
-                        <span style="font-size: 0.9em; font-weight: bold; color: #cc0000; display: block; margin: 5px 0 10px 0; text-transform: uppercase;">Categoría: Deporte</span>
-                        <span style="display: block; text-align: justify;">Con un gol en el último minuto, el equipo de la ciudad se coronó campeón tras una temporada invicta.</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="padding: 20px; border: 1px solid #ddd;">
-                        <span style="font-size: 1.4em; font-weight: bold; display: block; color: #2c3e50;">Nueva pista atlética de nivel olímpico</span>
-                        <span style="font-size: 0.9em; font-weight: bold; color: #cc0000; display: block; margin: 5px 0 10px 0; text-transform: uppercase;">Categoría: Deporte</span>
-                        <span style="display: block; text-align: justify;">Los atletas de la región ahora cuentan con instalaciones de primer nivel para sus entrenamientos diarios.</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="padding: 20px; border: 1px solid #ddd;">
-                        <span style="font-size: 1.4em; font-weight: bold; display: block; color: #2c3e50;">Torneo escolar de básquetbol inicia este sábado</span>
-                        <span style="font-size: 0.9em; font-weight: bold; color: #cc0000; display: block; margin: 5px 0 10px 0; text-transform: uppercase;">Categoría: Deporte</span>
-                        <span style="display: block; text-align: justify;">Las escuelas secundarias se preparan para el inicio de la temporada de básquetbol juvenil en el gimnasio municipal.</span>
-                    </td>
-                </tr>
+        <section id="deporte">
+            <h2>Deporte <span class="badge-contador">Artículos: <span id="contador-deporte">0</span></span></h2>
+            <table id="tabla-deporte">
+                <tbody>
+                    <tr class="articulo-item">
+                        <td>
+                            <span class="noticia-titulo">El equipo local gana el campeonato regional</span>
+                            <span class="noticia-categoria">Categoría: Deporte</span>
+                            <span class="noticia-texto">Con un gol en el último minuto, el equipo de la ciudad se coronó campeón tras una temporada invicta.</span>
+                        </td>
+                    </tr>
+                    <tr class="articulo-item">
+                        <td>
+                            <span class="noticia-titulo">Nueva pista atlética de nivel olímpico</span>
+                            <span class="noticia-categoria">Categoría: Deporte</span>
+                            <span class="noticia-texto">Los atletas de la región ahora cuentan con instalaciones de primer nivel para sus entrenamientos diarios.</span>
+                        </td>
+                    </tr>
+                    <tr class="articulo-item">
+                        <td>
+                            <span class="noticia-titulo">Torneo escolar de básquetbol inicia este sábado</span>
+                            <span class="noticia-categoria">Categoría: Deporte</span>
+                            <span class="noticia-texto">Las escuelas secundarias se preparan para el inicio de la temporada de básquetbol juvenil en el gimnasio municipal.</span>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
         </section>
 
-        <section id="negocios" style="margin-bottom: 50px; border-bottom: 1px solid #eee; padding-bottom: 20px;">
-            <h2 style="color: #2c3e50; border-left: 5px solid #cc0000; padding-left: 10px;">Negocios y Emprendimientos</h2>
-            <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
-                <tr>
-                    <td style="padding: 20px; border: 1px solid #ddd;">
-                        <span style="font-size: 1.4em; font-weight: bold; display: block; color: #2c3e50;">Startup tecnológica local abre nuevas oficinas</span>
-                        <span style="font-size: 0.9em; font-weight: bold; color: #cc0000; display: block; margin: 5px 0 10px 0; text-transform: uppercase;">Categoría: Emprendimiento</span>
-                        <span style="display: block; text-align: justify;">Jóvenes ingenieros han lanzado una aplicación que promete revolucionar el transporte compartido en la ciudad.</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="padding: 20px; border: 1px solid #ddd;">
-                        <span style="font-size: 1.4em; font-weight: bold; display: block; color: #2c3e50;">Informe: Sube el precio de la vivienda en el centro</span>
-                        <span style="font-size: 0.9em; font-weight: bold; color: #cc0000; display: block; margin: 5px 0 10px 0; text-transform: uppercase;">Categoría: Negocios</span>
-                        <span style="display: block; text-align: justify;">El sector inmobiliario reporta un incremento del 5% en los arriendos durante este último trimestre.</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="padding: 20px; border: 1px solid #ddd;">
-                        <span style="font-size: 1.4em; font-weight: bold; display: block; color: #2c3e50;">Feria de emprendedores locales este domingo</span>
-                        <span style="font-size: 0.9em; font-weight: bold; color: #cc0000; display: block; margin: 5px 0 10px 0; text-transform: uppercase;">Categoría: Emprendimiento</span>
-                        <span style="display: block; text-align: justify;">Más de 50 pequeños empresarios mostrarán sus productos en la plaza de armas para incentivar la economía.</span>
-                    </td>
-                </tr>
+        <section id="negocios">
+            <h2>Negocios y Emprendimientos <span class="badge-contador">Artículos: <span id="contador-negocios">0</span></span></h2>
+            <table id="tabla-negocios">
+                <tbody>
+                    <tr class="articulo-item">
+                        <td>
+                            <span class="noticia-titulo">Startup tecnológica local abre nuevas oficinas</span>
+                            <span class="noticia-categoria">Categoría: Emprendimiento</span>
+                            <span class="noticia-texto">Jóvenes ingenieros han lanzado una aplicación que promete revolucionar el transporte compartido en la ciudad.</span>
+                        </td>
+                    </tr>
+                    <tr class="articulo-item">
+                        <td>
+                            <span class="noticia-titulo">Informe: Sube el precio de la vivienda en el centro</span>
+                            <span class="noticia-categoria">Categoría: Negocios</span>
+                            <span class="noticia-texto">El sector inmobiliario reporta un incremento del 5% en los arriendos durante este último trimestre.</span>
+                        </td>
+                    </tr>
+                    <tr class="articulo-item">
+                        <td>
+                            <span class="noticia-titulo">Feria de emprendedores locales este domingo</span>
+                            <span class="noticia-categoria">Categoría: Emprendimiento</span>
+                            <span class="noticia-texto">Más de 50 pequeños empresarios mostrarán sus productos en la plaza de armas para incentivar la economía.</span>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
 
-            <div style="text-align: center; margin: 30px 0; background: #f4f4f4; padding: 20px; border-radius: 8px;">
-                <h3 style="color: #2c3e50;">Unos segundos para relajarse. (Demo Audio)</h3>
-                <audio controls style="margin-top: 10px;">
+            <div class="multimedia-caja">
+                <h3>Unos segundos para relajarse. (Demo Audio)</h3>
+                <audio controls>
                     <source src="audio.mp3" type="audio/mpeg">
                 </audio>
             </div>
         </section>
-    
+
+        <hr>
+
+        <section id="publicar" class="formulario-caja">
+            <h2>Redactar Nuevo Artículo</h2>
+            <p>Completa los campos para publicar una noticia automáticamente.</p>
+            <form id="form-nuevo-articulo">
+                <input type="text" id="input-titulo" placeholder="Título del artículo" required>
+                <select id="input-seccion" required>
+                    <option value="" disabled selected>¿En qué sección quieres publicar?</option>
+                    <option value="inicio">Noticias Generales</option>
+                    <option value="deporte">Deportes</option>
+                    <option value="negocios">Negocios</option>
+                </select>
+                <textarea id="input-descripcion" rows="4" placeholder="Escribe el contenido de la noticia..." required></textarea>
+                <button type="submit">Publicar Ahora</button>
+            </form>
+        </section>
+
+        <section id="contacto" class="formulario-caja">
+            <h2>Contacto</h2>
+            <form id="form-contacto">
+                <input type="text" id="contacto-nombre" placeholder="Tu Nombre" required>
+                <textarea id="contacto-mensaje" rows="3" placeholder="Tu Mensaje..." required></textarea>
+                <button type="submit">Enviar al Editor</button>
+            </form>
+        </section>
+
     </main>
 
-</body>
-</html>
+    <footer>
+        &copy; 2026 El Faro - Periódico Local. Proyecto de Software.
+    </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
