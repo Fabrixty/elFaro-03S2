@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Faro - Periódico Local</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </head>
 <body>
 
@@ -23,6 +27,9 @@
     </nav>
 
     <main>
+        <div class="alert alert-info text-center mb-0 fixed-top" role="alert">
+  <strong>Info!</strong> Este es un aviso de simulacro para los lectores de El Faro!.
+  </div>
         
         <section id="inicio">
             <h2>Noticias Generales <span class="badge-contador">Artículos: <span id="contador-inicio">0</span></span></h2>
@@ -53,7 +60,7 @@
             </table>
 
             <div class="multimedia-caja">
-                <h3>Noticia destacada: Pingüinos vuelven a la costa</h3>
+                <h3>Noticia destacada: Pingüinos vuelven a la costa!</h3>
                 <video width="100%" height="auto" controls class="video-player">
                     <source src="video.mp4" type="video/mp4">
                     Tu navegador no soporta el elemento de video.
@@ -155,9 +162,31 @@
 
     </main>
 
-    <footer>
-        &copy; 2026 El Faro - Periódico Local. Proyecto de Software.
-    </footer>
+    <footer class="bg-dark text-white py-4 mt-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <h5>El Faro</h5>
+        <p class="mb-0">&copy; 2026 El Faro - Periódico Local</p>
+        <small>Proyecto de Software</small>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5>Contacto</h5>
+        <p class="mb-0">editor@elfaro.cl</p>
+        <p class="mb-0">Tel: +56 9 1234 5678</p>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5>Enlaces</h5>
+        <ul class="list-unstyled mb-0">
+          <li><a href="#inicio" class="text-white">Inicio</a></li>
+          <li><a href="#deporte" class="text-white">Deporte</a></li>
+          <li><a href="#negocios" class="text-white">Negocios</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
 
     <script src="script.js"></script>
 </body>

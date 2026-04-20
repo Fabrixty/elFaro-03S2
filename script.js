@@ -16,7 +16,7 @@ function actualizarReloj() {
 setInterval(actualizarReloj, 1000);
 actualizarReloj();
 
-// 2. CONTADORES DINÁMICOS
+//  CONTADOR
 function actualizarContadores() {
     const secciones = ['inicio', 'deporte', 'negocios'];
     secciones.forEach(id => {
@@ -26,7 +26,7 @@ function actualizarContadores() {
 }
 actualizarContadores();
 
-// 3. AGREGAR ARTÍCULO
+//  AGREGAR ARTÍCULO
 const formArticulo = document.getElementById('form-nuevo-articulo');
 
 formArticulo.addEventListener('submit', function(e) {
